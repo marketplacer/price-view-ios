@@ -3,6 +3,9 @@
 This control shows tow prices next to each other: regular price and price before discount.
 The latter price is crossed out.
 
+<img src='https://dl.dropboxusercontent.com/u/11143285/bikeexchange/github_images/price-view-ios-screenshot.png' width='160' alt='Price control for iOS'>
+
+ 
 ## Usage
 
 ```
