@@ -21,6 +21,8 @@ priceView.priceBeforeDiscountFont = UIFont.systemFontOfSize(15)
 priceView.priceColor = UIColor.blackColor()
 priceView.priceBeforeDiscountColor = TegColors.grayColor()
 
+priceView.marginBetweenPrices = 5 # optional
+
 ```
 
 One can also use TegPriceView with the storyboard.
