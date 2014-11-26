@@ -15,7 +15,7 @@ class TegPriceView: UIView {
   var beforeDiscountFont = UIFont.systemFontOfSize(19)
   
   var priceColor = UIColor.blackColor()
-  var priceBeforeDiscountColor = UIColor.blackColor()
+  var priceBeforeDiscountColor = UIColor.grayColor()
 
   var marginBetweenPrices: CGFloat = 5
 
@@ -30,7 +30,7 @@ class TegPriceView: UIView {
   func show(price: String, priceBeforeDiscount: String? = nil) {
     layer.sublayers = nil
 
-    let priceLayer = TegStrikethroughTextLayer()
+    let priceLayer = CATextLayer()
     TegPriceView.styleTextLayer(priceLayer, text: price, font: priceFont)
     priceLayer.foregroundColor = priceColor.CGColor
     layer.addSublayer(priceLayer)
