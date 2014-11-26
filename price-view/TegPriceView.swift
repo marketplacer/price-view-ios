@@ -47,7 +47,16 @@ class TegPriceView: UIView {
   private class func addPriceBeforeDiscount(text: String, font: UIFont,
     superlayer: CALayer, position: CGPoint) -> CATextLayer {
 
+    let attributes = [
+      NSStrikethroughStyleAttributeName: NSNumber(int: 1),
+      NSFontAttributeName: font
+    ]
+
+    let attributedString = NSAttributedString(string: text, attributes: attributes)
+
     let priceBeforeDiscountLayer = TegPriceView.createTextLayer(text, font: font)
+
+    priceBeforeDiscountLayer.string = attributedString
 
     superlayer.addSublayer(priceBeforeDiscountLayer)
 
