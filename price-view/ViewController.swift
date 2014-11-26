@@ -15,7 +15,7 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    priceView.backgroundColor = nil
+//    priceView.backgroundColor = nil
   }
 
 

@@ -19,17 +19,10 @@ class TegPriceView: UIView {
 
   var marginBetweenPrices: CGFloat = 5
 
-  override init(frame: CGRect) {
-    super.init(frame: frame)
-  }
-
-  required init(coder aDecoder: NSCoder) {
-    super.init(coder: aDecoder)
-  }
-
   func show(price: String, priceBeforeDiscount: String? = nil) {
     layer.sublayers = nil
 
+    // Show price
     let priceLayer = CATextLayer()
     TegPriceView.styleTextLayer(priceLayer, text: price, font: priceFont)
     priceLayer.foregroundColor = priceColor.CGColor
@@ -37,6 +30,7 @@ class TegPriceView: UIView {
 
     size = priceLayer.bounds.size
  
+    // Show price before discount
     if let currentPriceBeforeDiscount = priceBeforeDiscount {
       let priceBeforeDiscountLayer = TegStrikethroughTextLayer()
       
