@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,25 +17,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Let-iF-Aqs" customClass="TegPriceView" customModule="price_view" customModuleProvider="target">
-                                <rect key="frame" x="16" y="45" width="568" height="41"/>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="41" translatesAutoresizingMaskIntoConstraints="NO" id="Let-iF-Aqs" customClass="TegPriceView" customModule="price_view" customModuleProvider="target">
+                                <rect key="frame" x="200" y="45" width="200" height="41"/>
                                 <color key="backgroundColor" red="1" green="0.98187100810000005" blue="0.74804543599999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="41" id="s8j-k2-Vvu"/>
-                                </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t01-TA-5FA">
+                                <rect key="frame" x="264" y="115" width="73" height="32"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <state key="normal" title="One price">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onShowOnePriceTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IBX-Qu-ovq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auC-3i-M5b">
+                                <rect key="frame" x="260" y="167" width="80" height="32"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <state key="normal" title="Two prices">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onShowTwoPricesTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4vD-Z3-gQp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Let-iF-Aqs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DRe-Td-6Ol"/>
+                            <constraint firstItem="t01-TA-5FA" firstAttribute="top" secondItem="Let-iF-Aqs" secondAttribute="bottom" constant="29" id="2R3-ms-oBo"/>
+                            <constraint firstAttribute="centerX" secondItem="auC-3i-M5b" secondAttribute="centerX" constant="-0.5" id="7Dz-8W-adi"/>
                             <constraint firstItem="Let-iF-Aqs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="HfZ-Ek-c6j"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Let-iF-Aqs" secondAttribute="trailing" id="Lod-cx-EiM"/>
+                            <constraint firstAttribute="centerX" secondItem="t01-TA-5FA" secondAttribute="centerX" constant="-0.5" id="cdN-1v-eDv"/>
                             <constraint firstAttribute="centerX" secondItem="Let-iF-Aqs" secondAttribute="centerX" id="edr-nj-2w3"/>
+                            <constraint firstItem="auC-3i-M5b" firstAttribute="top" secondItem="t01-TA-5FA" secondAttribute="bottom" constant="20" id="kng-Qi-RAs"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="priceView" destination="Let-iF-Aqs" id="MyW-NX-QJv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="310" y="426"/>
         </scene>
     </scenes>
 </document>
