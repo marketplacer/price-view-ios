@@ -15,6 +15,7 @@
 		2B35947E1A25946300BAC413 /* price_viewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B35947D1A25946300BAC413 /* price_viewTests.swift */; };
 		2B3594881A25949A00BAC413 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B3594871A25949A00BAC413 /* Default-568h@2x.png */; };
 		2B35948B1A25957100BAC413 /* TegPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B35948A1A25957100BAC413 /* TegPriceView.swift */; };
+		2B570A2D1A268D5E0001D7C6 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 2B570A2C1A268D5E0001D7C6 /* README.md */; };
 		2BB1AC971A267C9D00FC49B5 /* TegDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1AC961A267C9D00FC49B5 /* TegDraw.swift */; };
 		2BF562E21A25A9AB002D2D62 /* TegStrikethroughTextLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF562E11A25A9AB002D2D62 /* TegStrikethroughTextLayer.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 		2B35947D1A25946300BAC413 /* price_viewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = price_viewTests.swift; sourceTree = "<group>"; };
 		2B3594871A25949A00BAC413 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		2B35948A1A25957100BAC413 /* TegPriceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TegPriceView.swift; sourceTree = "<group>"; };
+		2B570A2C1A268D5E0001D7C6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2BB1AC961A267C9D00FC49B5 /* TegDraw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TegDraw.swift; sourceTree = "<group>"; };
 		2BF562E11A25A9AB002D2D62 /* TegStrikethroughTextLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TegStrikethroughTextLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +69,7 @@
 		2B3594591A25946300BAC413 = {
 			isa = PBXGroup;
 			children = (
+				2B570A2C1A268D5E0001D7C6 /* README.md */,
 				2B3594871A25949A00BAC413 /* Default-568h@2x.png */,
 				2B3594641A25946300BAC413 /* price-view */,
 				2B35947A1A25946300BAC413 /* price-viewTests */,
@@ -241,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B570A2D1A268D5E0001D7C6 /* README.md in Sources */,
 				2B35946A1A25946300BAC413 /* ViewController.swift in Sources */,
 				2B3594681A25946300BAC413 /* AppDelegate.swift in Sources */,
 				2B35948B1A25957100BAC413 /* TegPriceView.swift in Sources */,

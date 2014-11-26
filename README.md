@@ -12,3 +12,7 @@ priceView.showPrice('$199', '$299') # second price is the price before discount
 ```
 
 One can also use TegPriceView with the storyboard.
+
+## Repository home
+
+[https://github.com/exchangegroup/price-view-ios](https://github.com/exchangegroup/price-view-ios)
