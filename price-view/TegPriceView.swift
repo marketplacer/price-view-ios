@@ -13,6 +13,9 @@ class TegPriceView: UIView {
 
   var priceFont = UIFont.boldSystemFontOfSize(19)
   var beforeDiscountFont = UIFont.systemFontOfSize(19)
+  
+  var priceColor = UIColor.blackColor()
+  var priceBeforeDiscountColor = UIColor.blackColor()
 
   var marginBetweenPrices: CGFloat = 5
 
@@ -27,52 +30,37 @@ class TegPriceView: UIView {
   func show(price: String, priceBeforeDiscount: String? = nil) {
     layer.sublayers = nil
 
-    let priceLayer = TegPriceView.createTextLayer(price, font: priceFont)
+    let priceLayer = TegStrikethroughTextLayer()
+    TegPriceView.styleTextLayer(priceLayer, text: price, font: priceFont)
+    priceLayer.foregroundColor = priceColor.CGColor
     layer.addSublayer(priceLayer)
 
     size = priceLayer.bounds.size
-
+ 
     if let currentPriceBeforeDiscount = priceBeforeDiscount {
-      let priceBeforeDiscountLayer = TegPriceView.addPriceBeforeDiscount(
-        currentPriceBeforeDiscount,
-        font: beforeDiscountFont, superlayer: layer,
-        position: CGPoint(x: priceLayer.bounds.maxX + marginBetweenPrices, y: 0))
-
+      let priceBeforeDiscountLayer = TegStrikethroughTextLayer()
+      
+      TegPriceView.styleTextLayer(priceBeforeDiscountLayer,
+        text: currentPriceBeforeDiscount, font: beforeDiscountFont)
+      
+      layer.addSublayer(priceBeforeDiscountLayer)
+      
+      priceBeforeDiscountLayer.position = CGPoint(
+        x: priceLayer.bounds.maxX + marginBetweenPrices, y: 0)
+      
+      priceBeforeDiscountLayer.foregroundColor = priceBeforeDiscountColor.CGColor
+      
       size.width += priceBeforeDiscountLayer.bounds.width + marginBetweenPrices
     }
 
     invalidateIntrinsicContentSize()
   }
 
-  private class func addPriceBeforeDiscount(text: String, font: UIFont,
-    superlayer: CALayer, position: CGPoint) -> CATextLayer {
-
-    let attributes = [
-      NSStrikethroughStyleAttributeName: NSNumber(int: 1),
-      NSFontAttributeName: font
-    ]
-
-    let attributedString = NSAttributedString(string: text, attributes: attributes)
-
-    let priceBeforeDiscountLayer = TegPriceView.createTextLayer(text, font: font)
-
-    priceBeforeDiscountLayer.string = attributedString
-
-    superlayer.addSublayer(priceBeforeDiscountLayer)
-
-    priceBeforeDiscountLayer.position = position
-
-    return priceBeforeDiscountLayer
-  }
-
-
-  private class func createTextLayer(text: String, font: UIFont) -> CATextLayer {
+  private class func styleTextLayer(layer: CATextLayer, text: String, font: UIFont) -> CATextLayer {
     let size = NSString(string: text).sizeWithAttributes([NSFontAttributeName: font])
 
-    let layer = CATextLayer()
     layer.font = CGFontCreateWithFontName(font.fontName)
     layer.fontSize = font.pointSize
-    layer.foregroundColor = UIColor.blackColor().CGColor
     layer.string = text
     layer.bounds = CGRect(origin: CGPoint(), size: size)
     layer.contentsScale = UIScreen.mainScreen().scale
@@ -80,7 +68,7 @@ class TegPriceView: UIView {
 
     return layer
   }
-
+  
   override func intrinsicContentSize() -> CGSize {
     return size
   }

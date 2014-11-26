@@ -15,6 +15,7 @@
 		2B35947E1A25946300BAC413 /* price_viewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B35947D1A25946300BAC413 /* price_viewTests.swift */; };
 		2B3594881A25949A00BAC413 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B3594871A25949A00BAC413 /* Default-568h@2x.png */; };
 		2B35948B1A25957100BAC413 /* TegPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B35948A1A25957100BAC413 /* TegPriceView.swift */; };
+		2BF562E21A25A9AB002D2D62 /* TegStrikethroughTextLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF562E11A25A9AB002D2D62 /* TegStrikethroughTextLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		2B35947D1A25946300BAC413 /* price_viewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = price_viewTests.swift; sourceTree = "<group>"; };
 		2B3594871A25949A00BAC413 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		2B35948A1A25957100BAC413 /* TegPriceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TegPriceView.swift; sourceTree = "<group>"; };
+		2BF562E11A25A9AB002D2D62 /* TegStrikethroughTextLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TegStrikethroughTextLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				2B35948A1A25957100BAC413 /* TegPriceView.swift */,
+				2BF562E11A25A9AB002D2D62 /* TegStrikethroughTextLayer.swift */,
 			);
 			name = lib;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				2B35946A1A25946300BAC413 /* ViewController.swift in Sources */,
 				2B3594681A25946300BAC413 /* AppDelegate.swift in Sources */,
 				2B35948B1A25957100BAC413 /* TegPriceView.swift in Sources */,
+				2BF562E21A25A9AB002D2D62 /* TegStrikethroughTextLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +427,7 @@
 				2B3594831A25946300BAC413 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2B3594841A25946300BAC413 /* Build configuration list for PBXNativeTarget "price-viewTests" */ = {
 			isa = XCConfigurationList;
@@ -431,6 +436,7 @@
 				2B3594861A25946300BAC413 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
