@@ -1,10 +1,5 @@
 //
-//  TegDraw.swift
-//
 //  Helper functions for drawing lines, shapes etc.
-//
-//  Created by Evgenii Neumerzhitckii on 27/11/2014.
-//  Copyright (c) 2014 The Exchange Group Pty Ltd. All rights reserved.
 //
 
 import UIKit
