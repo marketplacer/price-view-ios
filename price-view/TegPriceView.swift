@@ -23,12 +23,12 @@ class TegPriceView: UIView {
     size = priceLayer.bounds.size
  
     // Show price before discount
-    if let currentPriceBeforeDiscount = priceBeforeDiscount {
+    if let priceBeforeDiscount = priceBeforeDiscount {
       let priceBeforeDiscountLayer = TegStrikethroughTextLayer()
       priceBeforeDiscountLayer.color = priceBeforeDiscountColor
       
       TegPriceView.styleTextLayer(priceBeforeDiscountLayer,
-        text: currentPriceBeforeDiscount, font: priceBeforeDiscountFont)
+        text: priceBeforeDiscount, font: priceBeforeDiscountFont)
       
       layer.addSublayer(priceBeforeDiscountLayer)
       
