@@ -3,7 +3,7 @@ import UIKit
 class TegStrikethroughTextLayer: CATextLayer {
   var color = UIColor.grayColor()
   
-  override func drawInContext(context: CGContext!) {
+  override func drawInContext(context: CGContext) {
     super.drawInContext(context)
     
     TegDraw.drawLine(context,

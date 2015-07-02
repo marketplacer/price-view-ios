@@ -18,6 +18,6 @@ class TegDraw {
     
     CGContextClosePath(context)
     
-    CGContextDrawPath(context, kCGPathFillStroke)
+    CGContextDrawPath(context, .FillStroke)
   }
 }
