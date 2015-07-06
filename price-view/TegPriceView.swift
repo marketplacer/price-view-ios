@@ -41,10 +41,13 @@ class TegPriceView: UIView {
     }
 
     invalidateIntrinsicContentSize()
+    
+    setupAccessibility(price)
   }
 
   private class func styleTextLayer(layer: CATextLayer, text: String, font: UIFont) -> CATextLayer {
-    let size = NSString(string: text).sizeWithAttributes([NSFontAttributeName: font])
+    var size = NSString(string: text).sizeWithAttributes([NSFontAttributeName: font])
+    size = CGSize(width: size.width + 2, height: size.height) // Add extra padding to the right to prevent cropping.
 
     layer.font = CGFontCreateWithFontName(font.fontName)
     layer.fontSize = font.pointSize
@@ -58,5 +61,11 @@ class TegPriceView: UIView {
   
   override func intrinsicContentSize() -> CGSize {
     return size
+  }
+  
+  private func setupAccessibility(price: String) {
+    self.isAccessibilityElement = true
+    self.accessibilityLabel = price
+    self.accessibilityTraits = UIAccessibilityTraitStaticText
   }
 }
