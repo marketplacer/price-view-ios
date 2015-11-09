@@ -3,7 +3,7 @@
 This control shows two prices next to each other: regular price and price before discount.
 The latter price is crossed out.
 
-<img src='https://raw.githubusercontent.com/exchangegroup/price-view-ios/master/graphics/price-view-ios-screenshot.png' width='160' alt='Price control for iOS'>
+<img src='https://raw.githubusercontent.com/marketplacer/price-view-ios/master/graphics/price-view-ios-screenshot.png' width='160' alt='Price control for iOS'>
 
 
 ## Usage
@@ -29,4 +29,4 @@ One can also use TegPriceView with the storyboard.
 
 ## Home
 
-[https://github.com/exchangegroup/price-view-ios](https://github.com/exchangegroup/price-view-ios)
+[https://github.com/marketplacer/price-view-ios](https://github.com/marketplacer/price-view-ios)
